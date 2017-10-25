@@ -1,7 +1,7 @@
 {
   "name": "@bukalapak/express-bearer-token",
   "description": "Bearer token middleware for express.",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "homepage": "https://github.com/bukalapak/express-bearer-token",
   "authors": [
     "Tyler Kellen <tyler@sleekcode.net>",
