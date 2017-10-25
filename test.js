@@ -82,13 +82,11 @@ describe('bearerToken', function () {
       },
     };
     var res = {
-      send: function (code) {
+      sendStatus: function (code) {
         expect(code).to.equal(400);
         done();
       }
     }
     bearerToken()(req, res);
   });
-
-
 });
