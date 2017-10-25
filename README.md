@@ -1,7 +1,9 @@
-# express-bearer-token [![Build Status](https://secure.travis-ci.org/tkellen/node-express-bearer-token.png)](http://travis-ci.org/tkellen/node-express-bearer-token)
+# express-bearer-token
+[![Build Status](https://travis-ci.org/bukalapak/express-bearer-token.svg?branch=master)](https://travis-ci.org/bukalapak/express-bearer-token)
+
 > Bearer token middleware for express.
 
-[![NPM](https://nodei.co/npm/express-bearer-token.png)](https://nodei.co/npm/express-bearer-token/)
+[![NPM](https://nodei.co/npm/@bukalapak/express-bearer-token.png)](https://nodei.co/npm/@bukalapak/express-bearer-token/)
 
 ## What?
 
@@ -9,7 +11,7 @@ Per [RFC6750] this module will attempt to extract a bearer token from a request 
 
 * The key `access_token` in the request body.
 * The key `access_token` in the request params.
-* The value from the header `Authorization: Bearer <token>`.
+* The value from the header `Authorization: Bearer <token>`. The header key is case insensitive.
 
 If a token is found, it will be stored on `req.token`.  If one has been provided in more than one location, this will abort the request immediately by sending code 400 (per [RFC6750]).
 
