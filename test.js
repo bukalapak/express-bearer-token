@@ -20,8 +20,16 @@ describe('bearerToken', function () {
     });
   });
 
-  it('finds a bearer token in headers under "authorization: bearer" and sets it to req.token', function (done) {
+  it('finds a bearer token in headers under "authorization: Bearer" and sets it to req.token', function (done) {
     var req = {headers:{authorization:'Bearer '+token}};
+    bearerToken()(req, {}, function () {
+      expect(req.token).to.equal(token);
+      done();
+    });
+  });
+
+  it('finds a bearer token in headers under "authorization: bearer" and sets it to req.token', function (done) {
+    var req = {headers:{authorization:'bearer '+token}};
     bearerToken()(req, {}, function () {
       expect(req.token).to.equal(token);
       done();

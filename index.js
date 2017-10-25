@@ -22,7 +22,7 @@ module.exports = function(opts) {
 
     if (req.headers && req.headers.authorization) {
       var parts = req.headers.authorization.split(' ');
-      if (parts.length === 2 && parts[0] === headerKey) {
+      if (parts.length === 2 && parts[0].toLowerCase() === headerKey.toLowerCase()) {
         if (token) {
           error = true;
         }
